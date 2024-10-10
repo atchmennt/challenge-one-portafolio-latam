@@ -3,16 +3,20 @@
 :root {
     --color-de-fondo: #F5F5F5;
     --color-de-fondo-menu: #ffffff;
-    --color-de-link: #000000;
+    
 }
 
 body {
-    background-color: var(--color-de-fondo);
+    color:#F5F5F5;
     font-family: 'Raleway', sans-serif;
     margin: 0;
     box-sizing: border-box;
     padding: 0;
     line-height: 1.6;
+}
+.body_general{
+    background-image: url(assets/background-8653526_1920.jpg);
+    opacity: 0.8;
 }
 
 ol, ul, li {
@@ -29,8 +33,15 @@ a {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 1rem;
-    background-color: var(--color-de-fondo-menu);
+    text-align: center;
+    
+    background-color: rgb(60, 60, 60);
+    color: #F5F5F5;
+    width: 100vw;
+}
+
+.navegacion{
+    color: #F5F5F5;
 }
 
 .cabecera__logo {
@@ -38,9 +49,13 @@ a {
 }
 
 .cabecera__titulo {
+    
     font-size: 1.2rem;
     text-align: center;
+    width: 100vw;
+
 }
+
 
 .navegacion__lista {
     display: none;
@@ -50,16 +65,133 @@ a {
     font-size: 0.9rem;
 }
 /* ------------------------------ Sección Presentación ------------------------------*/
+.presentacion__contenedor{
+    border: 2px solid black;
+    padding: 5%;
+    margin: 30px;
+    background-color: #ece4e4;
+    border: 1px solid black;
+    opacity: 0.8;
+    color: black;
+    margin: 5%;
+    font-weight: bold;
+    color: #000000;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    
+      
+}
+
+
+
+
+.redes__img:hover {
+    box-shadow: inset 0 100px 0 0 #031305;
+}
+.presentacion__foto{
+    width: 100%;
+}
+.presentacion__subtitulo{
+    font-size: 110%;
+}
+.redes{
+    color: #ffffff;
+    padding:40px;
+    margin:5%
+}
+.redes__img{
+    width: 180px; /* Ancho del botón */
+    padding: 10px 0; /* Espacio dentro del botón */
+    text-align: center; /* Centra el texto dentro del botón */
+    background-color: #0e1216; /* Color de fondo del botón */
+    color:white; /* Color del texto */
+    border:#0e1216; /* Sin bordes */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer;
+    margin: 5%;
+}
+
+
+
 
 
 /* ------------------------------ Sección sobre mí ----------------------------------*/
 
 
+.sobre-mi{
+    border: 2px solid black;
+    padding: 10%;
+    margin: 30px;
+    background-color: #130505;
+    border: 1px solid black;
+    opacity: 0.8;
+    color: black;
+    margin: 5%;
+    font-weight: bold;
+    color: #f0e7e7;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    
+}
+  
 /*------------------------------ Sección de Habilidades ------------------------------*/
+
+.habilidades__titulo{
+    text-align: center;
+    border: none;
+}
+
+.habilidades__elemento{
+    border: 2px solid  rgb(60, 60, 60);
+    width: 40%; /* Ancho del botón */
+    padding: 10px 0; /* Espacio dentro del botón */
+    text-align: center; /* Centra el texto dentro del botón */
+    background-color: #0e1216; /* Color de fondo del botón */
+    color:white; /* Color del texto */
+    height: 100px;
+    border-radius: 5px; /* Bordes redondeados */
+    display: inline-block;
+    margin: 2%;
+    
+    
+}
+
+.habilidades__icono{
+    width: 40px; /* Asegúrate de que todas las imágenes tengan el mismo ancho */
+    height: auto; /* Mantén la proporción de la imagen */
+    display: block; /* Para evitar que haya espacios debajo de la imagen */
+    margin: 0 auto;
+}
+
+
+
 
 
 /*------------------------------ Sección de Aficiones --------------------------------*/
+.aficiones__titulo{
+    text-align: center;
+    border: none;
+}
 
+.aficiones__elemento{
+    border: 2px solid  rgb(60, 60, 60);
+    width: 40%; /* Ancho del botón */
+    padding: 10px 0; /* Espacio dentro del botón */
+    text-align: center; /* Centra el texto dentro del botón */
+    background-color: #0e1216; /* Color de fondo del botón */
+    color:white; /* Color del texto */
+    height: 100px;
+    border-radius: 5px; /* Bordes redondeados */
+    display: inline-block;
+    margin: 2%;
+    
+    
+}
+
+.aficiones__icono{
+    width: 40%; /* Asegúrate de que todas las imágenes tengan el mismo ancho */
+    height: 50px; /* Mantén la proporción de la imagen */
+    display: block; /* Para evitar que haya espacios debajo de la imagen */
+    margin: 0 auto;
+}
 
 /*------------------------------ Sección de Proyectos --------------------------------*/
 
