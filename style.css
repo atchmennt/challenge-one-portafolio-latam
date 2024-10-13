@@ -193,10 +193,49 @@ a {
     margin: 0 auto;
 }
 
-/*------------------------------ Sección de Proyectos --------------------------------*/
+/*------------------------------ Sección de Formación Academica --------------------------------*/
+.formacion__titulo{
+    text-align: center;
+    border: none;
+}
+
+.detalles{
+    text-align: center;
+    ;
+}
+
+.formacion__icono{
+    width: 50vw;
+    display: block;
+    margin: 50px;
+}
 
 
-/*------------------------------ Sección de Contacto ---------------------------------*/
+
+/*------------------------------ Sección de Proyectos ---------------------------------*/
+.proyectos__titulo{
+    text-align: center;
+    text-decoration-line:unset;
+    text-decoration-style: double;
+    gap: 5px;
+}
+
+.proyectos__contenedor{
+    padding: 10%;
+    text-align: center;
+    border: 2px solid #000; /* Bordes de 2px de grosor con color negro */
+    border-radius: 10px; 
+    margin: 10%;
+    background-color:black;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    
+   
+}
+
+.contacto{
+    text-align: center;
+}
+
 
 
 /* ------------------------------ Responsividad ---------------------------------------*/

@@ -1,38 +1,15 @@
-/* Contenedor*/
 
-.presentacion__contenedor{
+
+.formacion{
     display: flex;
     flex-direction: column;
     align-items: center;
-    
+    justify-content: center;
 }
-
-
-/* Redes*/
-.redes{
+.proyectos__contenedor{
     display: flex;
     flex-direction: column;
-    gap: 20px;
     align-items: center;
-    
-}
-
-.redes__img{
-    display: flex;
-    gap: 60px;
-}
-
-/* Sobre mi*/
-
-.sobre-mi{
-    display: flex;
     justify-content: center;
 }
 
-/*Habilidades*/
-
-.habilidades__lista{
-    display: flex;
-    flex-direction: row;
-    gap:40%;
-}
