@@ -13,3 +13,15 @@
     justify-content: center;
 }
 
+.contacto__formulario{
+    display: flex;
+    flex-direction: column;
+}
+
+@media (min-width: 768px){
+    .redes{
+        display: flex;
+        flex-direction: row;
+        align-self: center;
+    }
+}

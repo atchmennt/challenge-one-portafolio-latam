@@ -231,12 +231,40 @@ a {
     
    
 }
-
+/* ------------------------------ Formulario ---------------------------------------*/
 .contacto{
     text-align: center;
 }
 
+.contacto__formulario{
+    width: 340px;
+    margin: 10%;
+    gap: 15px;
+    border: 2px;
+}
 
+.contacto__campo--textarea{
+    height: 100px;
+    border: 2px ;
+    border-radius: 10px;
+    background-color: #0e1216;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.contacto__campo{
+    height: 40px;
+    border-radius: 10px;
+    border: 2px;
+    background-color: #0e1216;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contacto__boton{
+    height: 50px;
+    border: 2px;
+    background-color: #01050a;
+    box-shadow: 0 4px 8px rgba(10, 6, 6, 0.1);
+    color: #f0e7e7;
+}
 
 /* ------------------------------ Responsividad ---------------------------------------*/
 
@@ -247,24 +275,41 @@ a {
         justify-content: space-between;
         align-items: center;
     }
-
+    
     .cabecera__logo {
         max-width: 100px;
     }
-
+    
     .cabecera__titulo {
         font-size: 1.5rem;
     }
-
+    
     .navegacion__lista {
         display: flex;
         flex-direction: row;
         gap: 1rem;
         margin-top: 0;
+        padding: 10px;
     }
 
     .navegacion__elemento a {
         font-size: 1rem;
+    }
+    .redes{
+        color: #ffffff;
+        padding:40px;
+        margin:5%
+    }
+    .redes__img{
+        width: 180px; /* Ancho del botón */
+        padding: 10px 0; /* Espacio dentro del botón */
+        text-align: center; /* Centra el texto dentro del botón */
+        background-color: #0e1216; /* Color de fondo del botón */
+        color:white; /* Color del texto */
+        border:#0e1216; /* Sin bordes */
+        border-radius: 5px; /* Bordes redondeados */
+        cursor: pointer;
+        margin: 5%;
     }
 }
 
