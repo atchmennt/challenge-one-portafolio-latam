@@ -194,22 +194,77 @@ a {
 }
 
 /*------------------------------ Sección de Formación Academica --------------------------------*/
-.formacion__titulo{
-    text-align: center;
-    border: none;
+/* Estilo base */
+/* Estilo base */
+/* Contenedor principal */
+.formacion {
+    display: flex;
+    flex-direction: column; /* Ordena los elementos en columna */
+    align-items: center; /* Alinea todo horizontalmente al centro */
+    justify-content: center; /* Centra verticalmente */
+    text-align: center; /* Alinea texto internamente */
+    padding: 20px;
+    margin: 0 auto; /* Asegura que el contenedor esté centrado */
+    max-width: 600px; /* Define un ancho máximo */
+    width: 100%; /* Se adapta al ancho disponible */
+    box-sizing: border-box; /* Incluye padding en el ancho total */
 }
 
-.detalles{
-    text-align: center;
-    ;
+/* Título */
+.formacion__titulo {
+    font-size: 1.5rem;
+    margin: 10px 0; /* Espaciado superior e inferior */
+    line-height: 1.2; /* Mejora la legibilidad */
 }
 
-.formacion__icono{
-    width: 50vw;
-    display: block;
-    margin: 50px;
+/* Imagen */
+.formacion__icono {
+    width: 80%; /* Imagen ocupa el 80% del ancho del contenedor */
+    max-width: 300px; /* Limita el tamaño máximo */
+    height: auto; /* Mantiene proporción */
+    display: block; /* Asegura que sea un bloque */
+    margin: 20px 0; /* Espaciado uniforme arriba y abajo */
 }
 
+/* Detalles */
+.detalles {
+    font-size: 1rem;
+    line-height: 1.5; /* Mejora la legibilidad */
+    margin: 10px 0; /* Espaciado uniforme */
+}
+
+/* Consultas para pantallas más pequeñas */
+@media (max-width: 768px) { /* Para tabletas */
+    .formacion__titulo {
+        font-size: 1.25rem;
+    }
+
+    .detalles {
+        font-size: 0.9rem;
+    }
+
+    .formacion__icono {
+        width: 90%; /* Más ancho para pantallas pequeñas */
+    }
+}
+
+@media (max-width: 480px) { /* Para celulares */
+    .formacion {
+        padding: 15px;
+    }
+
+    .formacion__titulo {
+        font-size: 1rem;
+    }
+
+    .detalles {
+        font-size: 0.8rem;
+    }
+
+    .formacion__icono {
+        width: 95%; /* Imagen casi llena el ancho */
+    }
+}
 
 
 /*------------------------------ Sección de Proyectos ---------------------------------*/
