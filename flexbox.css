@@ -1,27 +1,38 @@
+/* Contenedor*/
 
-
-.formacion{
+.presentacion__contenedor{
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    
 }
-.proyectos__contenedor{
+
+
+/* Redes*/
+.redes{
     display: flex;
     flex-direction: column;
+    gap: 20px;
     align-items: center;
+    
+}
+
+.redes__img{
+    display: flex;
+    gap: 60px;
+}
+
+/* Sobre mi*/
+
+.sobre-mi{
+    display: flex;
     justify-content: center;
 }
 
-.contacto__formulario{
-    display: flex;
-    flex-direction: column;
-}
+/*Habilidades*/
 
-@media (min-width: 768px){
-    .redes{
-        display: flex;
-        flex-direction: row;
-        align-self: center;
-    }
+.habilidades__lista{
+    display: flex;
+    flex-direction: row;
+    gap:40%;
 }

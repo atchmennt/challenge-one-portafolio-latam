@@ -1,381 +1,155 @@
-/* Este repositório base fué creado para ayudarte en caso que no sepas como comenzar, recuerda que el portafolio es tu carta de presentación y debes darle tu cara, por eso te invitamos a personalizarlo según tu estilo y preferencias no te limites apenas al layout propuesto en figma  
-*/
 :root {
-    --color-de-fondo: #F5F5F5;
-    --color-de-fondo-menu: #ffffff;
-    
+    --color-primario: #031305;
+    --color-secundario: #f5f5f5;
+    --color-acento: #ece4e4;
+    --color-texto: #000;
+    --color-texto-invertido: #fff;
+    --fuente-principal: 'Raleway', sans-serif;
 }
 
 body {
-    color:#F5F5F5;
-    font-family: 'Raleway', sans-serif;
     margin: 0;
-    box-sizing: border-box;
     padding: 0;
+    font-family: var(--fuente-principal);
     line-height: 1.6;
-}
-.body_general{
-    background-image: url(assets/background-8653526_1920.jpg);
-    opacity: 0.8;
+    background-color: var(--color-secundario);
+    color: var(--color-texto);
+    box-sizing: border-box;
 }
 
-ol, ul, li {
+header {
+    background-color: var(--color-primario);
+    color: var(--color-texto-invertido);
+    padding: 1rem;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.8rem;
+}
+
+nav {
+    margin-top: 1rem;
+}
+
+nav ul {
     list-style: none;
-}
-
-a {
-    text-decoration: none;
-    color: var(--color-de-link);
-}
-
-/* ------------------------------ Sección Menú -------------------------------*/
-.cabecera {
+    padding: 0;
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--color-texto-invertido);
+    font-weight: bold;
+}
+
+.contenedor {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+.presentacion {
     text-align: center;
-    
-    background-color: rgb(60, 60, 60);
-    color: #F5F5F5;
-    width: 100vw;
+    padding: 2rem;
+    background-color: var(--color-acento);
+    border-radius: 8px;
+    margin: 2rem 0;
 }
 
-.navegacion{
-    color: #F5F5F5;
+.presentacion img {
+    max-width: 150px;
+    border-radius: 50%;
 }
 
-.cabecera__logo {
-    max-width: 80px; /* Ajuste para pantallas pequeñas */
+.presentacion h2 {
+    color: var(--color-primario);
 }
 
-.cabecera__titulo {
-    
-    font-size: 1.2rem;
-    text-align: center;
-    width: 100vw;
-
+.presentacion ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
 }
 
-
-.navegacion__lista {
-    display: none;
-}
-
-.navegacion__elemento a {
+.presentacion ul li a {
+    background-color: var(--color-primario);
+    color: var(--color-texto-invertido);
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    text-decoration: none;
     font-size: 0.9rem;
 }
-/* ------------------------------ Sección Presentación ------------------------------*/
-.presentacion__contenedor{
-    border: 2px solid black;
-    padding: 5%;
-    margin: 30px;
-    background-color: #ece4e4;
-    border: 1px solid black;
-    opacity: 0.8;
-    color: black;
-    margin: 5%;
-    font-weight: bold;
-    color: #000000;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    
-      
+
+.sobre-mi {
+    background-color: var(--color-acento);
+    padding: 2rem;
+    margin: 2rem 0;
+    border-radius: 8px;
 }
 
-
-
-
-.redes__img:hover {
-    box-shadow: inset 0 100px 0 0 #031305;
-}
-.presentacion__foto{
-    width: 100%;
-}
-.presentacion__subtitulo{
-    font-size: 110%;
-}
-.redes{
-    color: #ffffff;
-    padding:40px;
-    margin:5%
-}
-.redes__img{
-    width: 180px; /* Ancho del botón */
-    padding: 10px 0; /* Espacio dentro del botón */
-    text-align: center; /* Centra el texto dentro del botón */
-    background-color: #0e1216; /* Color de fondo del botón */
-    color:white; /* Color del texto */
-    border:#0e1216; /* Sin bordes */
-    border-radius: 5px; /* Bordes redondeados */
-    cursor: pointer;
-    margin: 5%;
+.sobre-mi h2 {
+    color: var(--color-primario);
 }
 
-
-
-
-
-/* ------------------------------ Sección sobre mí ----------------------------------*/
-
-
-.sobre-mi{
-    border: 2px solid black;
-    padding: 10%;
-    margin: 30px;
-    background-color: #130505;
-    border: 1px solid black;
-    opacity: 0.8;
-    color: black;
-    margin: 5%;
-    font-weight: bold;
-    color: #f0e7e7;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    
+.habilidades {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1rem;
 }
-  
-/*------------------------------ Sección de Habilidades ------------------------------*/
 
-.habilidades__titulo{
+.habilidad {
+    background-color: var(--color-primario);
+    color: var(--color-texto-invertido);
     text-align: center;
-    border: none;
+    padding: 1rem;
+    border-radius: 8px;
 }
 
-.habilidades__elemento{
-    border: 2px solid  rgb(60, 60, 60);
-    width: 40%; /* Ancho del botón */
-    padding: 10px 0; /* Espacio dentro del botón */
-    text-align: center; /* Centra el texto dentro del botón */
-    background-color: #0e1216; /* Color de fondo del botón */
-    color:white; /* Color del texto */
-    height: 100px;
-    border-radius: 5px; /* Bordes redondeados */
-    display: inline-block;
-    margin: 2%;
-    
-    
+.habilidad img {
+    max-width: 50px;
 }
 
-.habilidades__icono{
-    width: 40px; /* Asegúrate de que todas las imágenes tengan el mismo ancho */
-    height: auto; /* Mantén la proporción de la imagen */
-    display: block; /* Para evitar que haya espacios debajo de la imagen */
-    margin: 0 auto;
-}
-
-
-
-
-
-/*------------------------------ Sección de Aficiones --------------------------------*/
-.aficiones__titulo{
+.contacto {
     text-align: center;
-    border: none;
+    padding: 2rem;
+    margin: 2rem 0;
+    background-color: var(--color-acento);
+    border-radius: 8px;
 }
 
-.aficiones__elemento{
-    border: 2px solid  rgb(60, 60, 60);
-    width: 40%; /* Ancho del botón */
-    padding: 10px 0; /* Espacio dentro del botón */
-    text-align: center; /* Centra el texto dentro del botón */
-    background-color: #0e1216; /* Color de fondo del botón */
-    color:white; /* Color del texto */
-    height: 100px;
-    border-radius: 5px; /* Bordes redondeados */
-    display: inline-block;
-    margin: 2%;
-    
-    
-}
-
-.aficiones__icono{
-    width: 40%; /* Asegúrate de que todas las imágenes tengan el mismo ancho */
-    height: 50px; /* Mantén la proporción de la imagen */
-    display: block; /* Para evitar que haya espacios debajo de la imagen */
-    margin: 0 auto;
-}
-
-/*------------------------------ Sección de Formación Academica --------------------------------*/
-/* Estilo base */
-/* Estilo base */
-/* Contenedor principal */
-.formacion {
-    display: flex;
-    flex-direction: column; /* Ordena los elementos en columna */
-    align-items: center; /* Alinea todo horizontalmente al centro */
-    justify-content: center; /* Centra verticalmente */
-    text-align: center; /* Alinea texto internamente */
-    padding: 20px;
-    margin: 0 auto; /* Asegura que el contenedor esté centrado */
-    max-width: 600px; /* Define un ancho máximo */
-    width: 100%; /* Se adapta al ancho disponible */
-    box-sizing: border-box; /* Incluye padding en el ancho total */
-}
-
-/* Título */
-.formacion__titulo {
-    font-size: 1.5rem;
-    margin: 10px 0; /* Espaciado superior e inferior */
-    line-height: 1.2; /* Mejora la legibilidad */
-}
-
-/* Imagen */
-.formacion__icono {
-    width: 80%; /* Imagen ocupa el 80% del ancho del contenedor */
-    max-width: 300px; /* Limita el tamaño máximo */
-    height: auto; /* Mantiene proporción */
-    display: block; /* Asegura que sea un bloque */
-    margin: 20px 0; /* Espaciado uniforme arriba y abajo */
-}
-
-/* Detalles */
-.detalles {
-    font-size: 1rem;
-    line-height: 1.5; /* Mejora la legibilidad */
-    margin: 10px 0; /* Espaciado uniforme */
-}
-
-/* Consultas para pantallas más pequeñas */
-@media (max-width: 768px) { /* Para tabletas */
-    .formacion__titulo {
-        font-size: 1.25rem;
-    }
-
-    .detalles {
-        font-size: 0.9rem;
-    }
-
-    .formacion__icono {
-        width: 90%; /* Más ancho para pantallas pequeñas */
-    }
-}
-
-@media (max-width: 480px) { /* Para celulares */
-    .formacion {
-        padding: 15px;
-    }
-
-    .formacion__titulo {
-        font-size: 1rem;
-    }
-
-    .detalles {
-        font-size: 0.8rem;
-    }
-
-    .formacion__icono {
-        width: 95%; /* Imagen casi llena el ancho */
-    }
-}
-
-
-/*------------------------------ Sección de Proyectos ---------------------------------*/
-.proyectos__titulo{
+footer {
+    background-color: var(--color-primario);
+    color: var(--color-texto-invertido);
     text-align: center;
-    text-decoration-line:unset;
-    text-decoration-style: double;
-    gap: 5px;
+    padding: 1rem;
+    font-size: 0.9rem;
 }
 
-.proyectos__contenedor{
-    padding: 10%;
-    text-align: center;
-    border: 2px solid #000; /* Bordes de 2px de grosor con color negro */
-    border-radius: 10px; 
-    margin: 10%;
-    background-color:black;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    
-   
-}
-/* ------------------------------ Formulario ---------------------------------------*/
-.contacto{
-    text-align: center;
-}
-
-.contacto__formulario{
-    width: 340px;
-    margin: 10%;
-    gap: 15px;
-    border: 2px;
-}
-
-.contacto__campo--textarea{
-    height: 100px;
-    border: 2px ;
-    border-radius: 10px;
-    background-color: #0e1216;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-.contacto__campo{
-    height: 40px;
-    border-radius: 10px;
-    border: 2px;
-    background-color: #0e1216;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.contacto__boton{
-    height: 50px;
-    border: 2px;
-    background-color: #01050a;
-    box-shadow: 0 4px 8px rgba(10, 6, 6, 0.1);
-    color: #f0e7e7;
-}
-
-/* ------------------------------ Responsividad ---------------------------------------*/
-
-/* Tablets y pantallas más grandes */
+/* Responsividad */
 @media (min-width: 768px) {
-    .cabecera {
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-    }
-    
-    .cabecera__logo {
-        max-width: 100px;
-    }
-    
-    .cabecera__titulo {
-        font-size: 1.5rem;
-    }
-    
-    .navegacion__lista {
-        display: flex;
-        flex-direction: row;
-        gap: 1rem;
-        margin-top: 0;
-        padding: 10px;
+    header h1 {
+        font-size: 2.4rem;
     }
 
-    .navegacion__elemento a {
-        font-size: 1rem;
+    .presentacion {
+        padding: 3rem;
     }
-    .redes{
-        color: #ffffff;
-        padding:40px;
-        margin:5%
-    }
-    .redes__img{
-        width: 180px; /* Ancho del botón */
-        padding: 10px 0; /* Espacio dentro del botón */
-        text-align: center; /* Centra el texto dentro del botón */
-        background-color: #0e1216; /* Color de fondo del botón */
-        color:white; /* Color del texto */
-        border:#0e1216; /* Sin bordes */
-        border-radius: 5px; /* Bordes redondeados */
-        cursor: pointer;
-        margin: 5%;
+
+    .habilidad img {
+        max-width: 70px;
     }
 }
 
-/* Pantallas grandes */
 @media (min-width: 1024px) {
-    /* Aquí puedes ajustar aún más el diseño para pantallas grandes */
-    .cabecera__titulo {
-        font-size: 1.8rem;
-    }
-
-    .navegacion__elemento a {
-        font-size: 1.1rem;
+    nav ul {
+        justify-content: space-around;
     }
 }

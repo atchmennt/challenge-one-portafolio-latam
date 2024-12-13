@@ -2,172 +2,265 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <!-- Fuente del Proyecto Raleway -->
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="flexbox.css">
-    <title>Mi Portafolio</title>
-</head>
+    <title>Portafolio Responsivo</title>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
 
-<body class="body_general" >
-    <!-- Menú -->
-    <header class="cabecera">
-        <img class="cabecera__logo" src="assets/vector.png" alt="Logo">
-        <h1 class="cabecera__titulo">Thiare Francesca Soto Ramos</h1>
-        <nav class="navegacion">
-            <ul class="navegacion__lista">
-                <li class="navegacion__elemento"><a href="#sobre-mi">Sobre mí</a></li>
-                <li class="navegacion__elemento"><a href="#habilidades">Habilidades</a></li>
-                <li class="navegacion__elemento"><a href="#aficiones">Aficiones</a></li>
-                <li class="navegacion__elemento"><a href="#formacion">Formación</a></li>
-                <li class="navegacion__elemento"><a href="#proyectos">Proyectos</a></li>
-                <li class="navegacion__elemento"><a href="#contacto">Contacto</a></li>
+    <style>
+        :root {
+            --color-primario: #031305;
+            --color-secundario: #f5f5f5;
+            --color-acento: #ece4e4;
+            --color-texto: #000;
+            --color-texto-invertido: #fff;
+            --fuente-principal: 'Raleway', sans-serif;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: var(--fuente-principal);
+            line-height: 1.6;
+            background-color: var(--color-secundario);
+            color: var(--color-texto);
+            box-sizing: border-box;
+        }
+
+        header {
+            background-color: var(--color-primario);
+            color: var(--color-texto-invertido);
+            padding: 1rem;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 1.8rem;
+        }
+
+        nav {
+            margin-top: 1rem;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: var(--color-texto-invertido);
+            font-weight: bold;
+        }
+
+        .contenedor {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem;
+        }
+
+        .presentacion {
+            text-align: center;
+            padding: 2rem;
+            background-color: var(--color-acento);
+            border-radius: 8px;
+            margin: 2rem 0;
+        }
+
+        .presentacion img {
+            max-width: 150px;
+            border-radius: 50%;
+        }
+
+        .presentacion h2 {
+            color: var(--color-primario);
+        }
+
+        .presentacion ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .presentacion ul li a {
+            background-color: var(--color-primario);
+            color: var(--color-texto-invertido);
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+
+        .sobre-mi {
+            background-color: var(--color-acento);
+            padding: 2rem;
+            margin: 2rem 0;
+            border-radius: 8px;
+        }
+
+        .sobre-mi h2 {
+            color: var(--color-primario);
+        }
+
+        .habilidades {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1rem;
+        }
+
+        .habilidad {
+            background-color: var(--color-primario);
+            color: var(--color-texto-invertido);
+            text-align: center;
+            padding: 1rem;
+            border-radius: 8px;
+        }
+
+        .habilidad img {
+            max-width: 50px;
+        }
+
+        .contacto {
+            text-align: center;
+            padding: 2rem;
+            margin: 2rem 0;
+            background-color: var(--color-acento);
+            border-radius: 8px;
+        }
+
+        footer {
+            background-color: var(--color-primario);
+            color: var(--color-texto-invertido);
+            text-align: center;
+            padding: 1rem;
+            font-size: 0.9rem;
+        }
+
+        /* Responsividad */
+        @media (min-width: 768px) {
+            header h1 {
+                font-size: 2.4rem;
+            }
+
+            .presentacion {
+                padding: 3rem;
+            }
+
+            .habilidad img {
+                max-width: 70px;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            nav ul {
+                justify-content: space-around;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Mi Portafolio</h1>
+        <nav>
+            <ul>
+                <li><a href="#presentacion">Presentación</a></li>
+                <li><a href="#sobre-mi">Sobre mí</a></li>
+                <li><a href="#habilidades">Habilidades</a></li>
+                <li><a href="#contacto">Contacto</a></li>
             </ul>
         </nav>
     </header>
 
-    <!-- Sección de Presentación -->
-    <section class="presentacion">
-        <img class="presentacion__foto" src="assets/profile.png" alt="Foto de perfil">
-        <div class="presentacion__contenedor">
-            <h2 class="presentacion__titulo">Hola, mi nombre es Thiare Soto y me estoy especializando en Full Stack y Front-end</h2>
-            <p class="presentacion__subtitulo">Me estoy formando en Fundación Soy Mas con Booolean Academia, en Oracle University y tambien en Oracle ONE en Alura Latam.</p>
-            <ul class="redes">
-                <li class="redes__img"><a href="https://github.com/atchmennt">Github <img src="assets/arrow.png" alt="Flecha"></a></li>
-                <li class="redes__img"><a href="www.linkedin.com/in/thiare-soto">Linkedin <img src="assets/arrow.png" alt="Flecha"></a></li>
-                
-                <li class="redes__img"><a href="assets/ThiareSotoRamos.pdf">Currículum <img src="assets/arrow.png" alt="Flecha"></a></li>
+    <div class="contenedor">
+        <section id="presentacion" class="presentacion">
+            <img src="assets/WhatsApp Image 2024-12-02 at 2.38.15 PM.jpeg" alt="Foto de perfil">
+            <h2>Hola, soy Thiare Soto</h2>
+            <p>Desarrolladora front-end apasionada por crear experiencias digitales memorables. ¡Bienvenida a mi portafolio!</p>
+            <ul>
+                <li><a href="https://github.com/atchmennt" target="_blank">GitHub</a></li>
+                <li><a href="https://www.linkedin.com/in/thiare-soto" target="_blank">LinkedIn</a></li>
+                <li><a href="assets/ThiareSotoRamos.pdf" target="_blank">Currículum</a></li>
             </ul>
-        </div>
-    </section>
+        </section>
 
-    <!-- Sección sobre mí -->
-    <section class="sobre-mi" id="sobre-mi">
-        <h2 class="sobre-mi__titulo">Sobre mí</h2>
-        <p class="sobre-mi__texto">
-        
-            Soy Thiare Soto, apasionada por el aprendizaje continuo y el desarrollo web. Actualmente, me especializo en Front-end, con un enfoque en la parte visual y creativa del desarrollo, aunque también tengo interés en profundizar en el Back-end para lograr una comprensión más integral. Tengo experiencia liderando proyectos, trabajando en equipo y adaptándome a diferentes entornos. Mi objetivo es seguir creciendo como desarrolladora, enfrentando nuevos desafíos que me permitan mejorar mis habilidades y conocimientos, siempre con la motivación de crear un futuro mejor para mí y mi hija.
-        
-        </p>
-       
-        <!-- Firma opcional -->
-        
-    </section>
-
-    <!-- Sección de Habilidades -->
-    <section class="habilidades" id="habilidades">
-        <h2 class="habilidades__titulo">Habilidades</h2>
-        <ul class="habilidades__lista">
-            <li class="habilidades__elemento">
-                <img class="habilidades__icono" src="assets/html.png" alt="HTML">
-                <p class="habilidades__nombre">HTML 5</p>
-            </li>
-            <li class="habilidades__elemento">
-                <img class="habilidades__icono" src="assets/js_icon.png" alt="JavaScript">
-                <p class="habilidades__nombre">JavaScript</p>
-            </li>
-            <li class="habilidades__elemento">
-                <img class="habilidades__icono" src="assets/piton.png" alt="PHP">
-                <p class="habilidades__nombre">Python</p>
-            </li>
-            <li class="habilidades__elemento">
-                <img class="habilidades__icono" src="" alt="Node.js">
-                <p class="habilidades__nombre">Poo</p>
-            </li>
-            <li class="habilidades__elemento">
-                <img class="habilidades__icono" src="assets/css_icon.png" alt="React">
-                <p class="habilidades__nombre">CSS</p>
-            </li>
-            <li class="habilidades__elemento">
-                <img class="habilidades__icono" src="assets/css_icon.png" alt="CSS">
-                <p class="habilidades__nombre">Github y Linux</p>
-            </li>
-        </ul>
-    </section>
-
-    <!-- Sección de Aficiones -->
-    <section class="aficiones" id="aficiones">
-        <h2 class="aficiones__titulo">Aficiones</h2>
-        <ul class="aficiones__lista">
-            <li class="aficiones__elemento">
-                <img class="aficiones__icono" src="assets/skate_icon.png" alt="Patinaje">
-                <p class="aficiones__nombre">Patinaje</p>
-            </li>
-            <li class="aficiones__elemento">
-                <img class="aficiones__icono" src="assets/guitar_icon.png" alt="Tocar bajo">
-                <p class="aficiones__nombre">Tocar bajo</p>
-            </li>
-            <li class="aficiones__elemento">
-                <img class="aficiones__icono" src="assets/headphones_icon.png" alt="Oír música">
-                <p class="aficiones__nombre">Oír música</p>
-            </li>
-            <li class="aficiones__elemento">
-                <img class="aficiones__icono" src="assets/tv_icon.png" alt="Ver series">
-                <p class="aficiones__nombre">Ver series</p>
-            </li>
-            <li class="aficiones__elemento">
-                <img class="aficiones__icono" src="assets/forkspoon_icon.png" alt="Cocinar">
-                <p class="aficiones__nombre">Cocinar</p>
-            </li>
-            <li class="aficiones__elemento">
-                <img class="aficiones__icono" src="assets/camera_icon.png" alt="Tomar fotos">
-                <p class="aficiones__nombre">Tomar fotos</p>
-            </li>
-        </ul>
-    </section>
-
-    <!-- Sección de Formación académica -->
-    <section class="formacion" id="formacion">
-        <h2 class="formacion__titulo">Formación académica</h2>
-        <ul class="formacion__lista">
-            <li class="formacion__elemento">
-                <img class="formacion__icono" src="assets/boolean academia.jfif" alt="UFPR">
-                <div class="detalles">
-                    <h3 class="formacion__nombre"> Formación Full Stack en Boolean academia</h3>
-                    <p class="formacion__detalle">Marzo 2024 / Actualmente</p>
+        <section id="sobre-mi" class="sobre-mi">
+            <h2>Sobre mí</h2>
+            <p>Soy Thiare Soto, apasionada por el aprendizaje continuo y el desarrollo web. Actualmente, me especializo en Front-end, con un enfoque en la parte visual y creativa del desarrollo, aunque también tengo interés en profundizar en el Back-end para lograr una comprensión más integral. Tengo experiencia liderando proyectos, trabajando en equipo y adaptándome a diferentes entornos. Mi objetivo es seguir creciendo como desarrolladora, enfrentando nuevos desafíos que me permitan mejorar mis habilidades y conocimientos, siempre con la motivación de crear un futuro mejor para mí y mi hija.</p>
+        </section>
+        <section id="habilidades">
+            <h2>Habilidades</h2>
+            <div class="habilidades">
+                <div class="habilidad">
+                    <i class="fab fa-html5"></i>
+                    <p>HTML</p>
                 </div>
-            </li>
-            <li class="formacion__elemento">
-                <img class="formacion__icono" src="assets/logo.aalura.jpg" alt="Alura">
-                <div class="detalles">
-                    <h3 class="formacion__nombre">Formación en Front-end</h3>
-                    <p class="formacion__detalle">2024 - Alura</p>
+                <div class="habilidad">
+                    <i class="fab fa-css3-alt"></i>
+                    <p>CSS</p>
                 </div>
-            </li>
-            <li class="formacion__elemento">
-                <img class="formacion__icono" src="assets/oracle2.jpg" alt="UFRJ">
-                <div class="detalles">
-                    <h3 class="formacion__nombre">Formacion en Oracle Cloud Infrastructure y Más</h3>
-                    <p class="formacion__detalle">2024 - Oracle</p>
+                <div class="habilidad">
+                    <i class="fab fa-js"></i>
+                    <p>JavaScript</p>
                 </div>
-            </li>
-        </ul>
-    </section>
-
-    <!-- Sección de Proyectos -->
-    <section class="proyectos" id="proyectos">
-        <h2 class="proyectos__titulo">Experiencia Profesional</h2>
-        <div class="proyectos__contenedor">
-            <h3 class="proyectos__nombre">Encargada de Pagina web y ventas virtuales en Gatro Market</h3>
-            <p class="proyectos__descripcion">Encargada de mantener los productos y precios actualizados en la pagina web y concretar ventas por redes sociales</p>
-        </div>
+                <div class="habilidad">
+                    <i class="fab fa-python"></i>
+                    <p>Python</p>
+                </div>
+                <div class="habilidad">
+                    <i class="fab fa-github"></i>
+                    <p>GitHub</p>
+                </div>
+            </div>
+        </section>
         
-    </section>
+        <section id="experiencia" class="experiencia" style="text-align: center; padding: 2rem;">
+            <h2 style="color: var(--color-primario); font-size: 2rem; margin-bottom: 1rem;">Experiencia Profesional</h2>
+            <div class="experiencia-item" style="background-color: var(--color-acento); padding: 1rem; margin: 1rem auto; border-radius: 8px; max-width: 600px; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);">
+                <h3 style="color: var(--color-primario); margin-bottom: 0.5rem;">French Takos</h3>
+                <p style="margin: 0;">Encargada de atención al cliente, manejo de caja, y preparación de pedidos en un entorno dinámico y orientado al cliente.</p>
+            </div>
+            <div class="experiencia-item" style="background-color: var(--color-acento); padding: 1rem; margin: 1rem auto; border-radius: 8px; max-width: 600px; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);">
+                <h3 style="color: var(--color-primario); margin-bottom: 0.5rem;">Club Chocolate</h3>
+                <p style="margin: 0;">Supervisión y logística en eventos, garantizando una experiencia óptima para los asistentes.</p>
+            </div>
+            <div class="experiencia-item" style="background-color: var(--color-acento); padding: 1rem; margin: 1rem auto; border-radius: 8px; max-width: 600px; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);">
+                <h3 style="color: var(--color-primario); margin-bottom: 0.5rem;">Cafetería Pascucci</h3>
+                <p style="margin: 0;">Barista y atención personalizada a clientes, asegurando altos estándares de calidad y servicio.</p>
+            </div>
+        </section>
+        
+        <section id="formacion" class="formacion" style="text-align: center; padding: 2rem;">
+            <h2 style="color: var(--color-primario); font-size: 2rem; margin-bottom: 1rem;">Formación Académica</h2>
+            <div class="formacion-item" style="background-color: var(--color-acento); padding: 1rem; margin: 1rem auto; border-radius: 8px; max-width: 600px; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);">
+                <h3 style="color: var(--color-primario); margin-bottom: 0.5rem;">Boolean Academia</h3>
+                <p style="margin: 0;">Formación intensiva en desarrollo web y programación con enfoque en proyectos prácticos.</p>
+            </div>
+            <div class="formacion-item" style="background-color: var(--color-acento); padding: 1rem; margin: 1rem auto; border-radius: 8px; max-width: 600px; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);">
+                <h3 style="color: var(--color-primario); margin-bottom: 0.5rem;">Alura Latam</h3>
+                <p style="margin: 0;">Especialización en Front-end y Back-end, abarcando tecnologías modernas como JavaScript, HTML, CSS y Python.</p>
+            </div>
+            <div class="formacion-item" style="background-color: var(--color-acento); padding: 1rem; margin: 1rem auto; border-radius: 8px; max-width: 600px; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);">
+                <h3 style="color: var(--color-primario); margin-bottom: 0.5rem;">Fundación Soy Más</h3>
+                <p style="margin: 0;">Capacitación integral en habilidades blandas y herramientas tecnológicas aplicadas al desarrollo profesional.</p>
+            </div>
+        </section>
+        
+        <section id="contacto" class="contacto">
+            <h2>Contacto</h2>
+            <p>¿Quieres trabajar conmigo? ¡Contáctame!</p>
+            <a href="mailto:thiare.soto@example.com">thiare.soto.ramos@gmail.com</a>
+        </section>
+    </div>
 
-    <!-- Sección de Contacto -->
-    <section class="contacto" id="contacto">
-        <h2 class="contacto__titulo">Contacto</h2>
-        <form autocomplete="off" name="formulario_contacto" class="contacto__formulario">
-            <input class="contacto__campo" type="text" placeholder="Nombre">
-            <input class="contacto__campo" type="email" placeholder="Correo Electrónico">
-            <textarea class=" contacto__campo--textarea" placeholder="Mensaje"></textarea>
-            <button class="contacto__boton" type="submit">Enviar</button>
-        </form>
-    </section>
+    <footer>
+        <p>&copy; 2024 Thiare Soto - Todos los derechos reservados</p>
+    </footer>
 </body>
-    <script src="script.js"></script>
 </html>
